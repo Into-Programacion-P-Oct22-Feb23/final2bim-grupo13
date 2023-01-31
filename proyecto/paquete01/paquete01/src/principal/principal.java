@@ -75,6 +75,6 @@ public class principal {
         mensaje = parteMensajeFinal.obtenerMensaje(numeroCuentas);
         System.out.println(mensaje);
 
-    }
+    }   
 
 }
