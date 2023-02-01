@@ -6,7 +6,6 @@ import procedimientos.parteProcedimientos;
 import mensaje.parteMensajeFinal;
 
 // @author ALISrj & cbhas
-
 public class principal {
 
     public static void main(String[] args) {
@@ -29,7 +28,7 @@ public class principal {
                     + "-----------------------------------------");
             opcionC = entrada.nextInt();
 
-            if (opcionC <= 7 && opcionC >= 0) {
+            if (opcionC <= 7 && opcionC >= 1) {
                 if (opcionC == 1) {
                     System.out.println(parteFunciones.crearFacebook());
                 } else {
@@ -59,22 +58,22 @@ public class principal {
                 numeroCuentas = numeroCuentas + 1;
                 entrada.nextLine();
 
-                System.out.println("Si desea salir del ciclo ingrese 's'");
-                opcionS = entrada.nextLine();
-
-                if ("s".equals(opcionS)) {
-                    bandera = false;
-                }
-
             } else {
-                System.out.println("\nError en opción seleccionada\nIngrese "
-                        + "nuevamente\n");
+                System.out.println("\nError en opción seleccionada\n");
+                entrada.nextLine();
+            }
+
+            System.out.println("Si desea salir del ciclo ingrese 's'");
+            opcionS = entrada.nextLine();
+
+            if ("s".equals(opcionS)) {
+                bandera = false;
             }
         }
 
         mensaje = parteMensajeFinal.obtenerMensaje(numeroCuentas);
         System.out.println(mensaje);
 
-    }   
+    }
 
 }
